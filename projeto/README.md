@@ -12,3 +12,9 @@
 * Eu enquanto secretário da universidade devo ser capaz de manter o cadastro das informações dos professores no sistema da universidade.
 * Porque dessa forma propiciaria que apenas professores cadastrados poderiam acessar o sistema e facilitaria as consultas e atualizações sobre o quadro de professores
 * Prioridade: alta
+
+## ID: 03
+* Usuário: Aluno
+* Como aluno desejo me matricular em disciplinas e remover matrículas já existentes há qualquer momento durante o período de matrícula.
+* Assim consigo escolher quais disciplinas cursar de uma forma mais fácil, facilitando a minha organização pessoal.
+* Prioridade: alta
