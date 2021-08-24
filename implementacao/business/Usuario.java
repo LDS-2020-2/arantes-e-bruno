@@ -13,6 +13,13 @@ public class Usuario {
 		}
 		return troca;
 	}
+	public boolean efetuarLogin(String email,String senha) {
+		boolean valida = false;
+		if( email == this.email && senha == this.senha) {
+			valida = true;
+		}
+		return valida;
+	}
 	public String getEmail() {
 		return email;
 	}
