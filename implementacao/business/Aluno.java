@@ -10,7 +10,7 @@ public class Aluno extends Usuario{
 	private String nome;
 	private long nmatricula;
 	private Curso curso;
-	private List<Disciplina>historico;
+	private List<DisciplinaCursada>historico;
 	private List<Disciplina>disciplinas;
 	
 	public List<Disciplina> consultarObrigatorias(){
@@ -49,7 +49,7 @@ public class Aluno extends Usuario{
 		this.curso = curso;
 	}
 
-	public List<Disciplina> getHistorico() {
+	public List<DisciplinaCursada> getHistorico() {
 		return historico;
 	}
 
@@ -57,7 +57,7 @@ public class Aluno extends Usuario{
 		return disciplinas;
 	}
 	
-	public void addHistorico(Disciplina d) {
+	public void addHistorico(DisciplinaCursada d) {
 		this.historico.add(d);
 	}
 	public void addDisciplina(Disciplina d) {
@@ -72,7 +72,7 @@ public class Aluno extends Usuario{
 		this.setNome(nome);
 		this.setNmatricula(nmatricula);;
 		this.setCurso(curso);
-		this.historico = new ArrayList<Disciplina>();
+		this.historico = new ArrayList<DisciplinaCursada>();
 		this.disciplinas = new ArrayList<Disciplina>();
 	}
 }
