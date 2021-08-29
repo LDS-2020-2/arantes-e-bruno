@@ -1,6 +1,11 @@
 package business;
 
-public class Usuario {
+import java.util.HashMap;
+import java.util.Map;
+
+import business.data.Storable;
+
+public class Usuario implements Storable {
 	private String email;
 	private String senha;
 	private String confSenha;
@@ -48,6 +53,28 @@ public class Usuario {
 		this.setEmail(email);
 		this.setSenha(senha);
 		this.setConfSenha(confSenha);
+	}
+
+	@Override
+	public String getFileName() {
+		return this.email;
+	}
+
+	@Override
+	public Map<String, String> getFields() {
+		Map<String, String> fields = new HashMap<>();
+		fields.put("email", this.email);
+		fields.put("senha", this.senha);
+		fields.put("confSenha", this.confSenha);
+
+		return fields;
+	}
+
+	@Override
+	public void loadFields(Map<String, String> fields) {
+		this.setEmail(fields.get("email"));
+		this.setSenha(fields.get("senha"));
+		this.setConfSenha(fields.get("confSenha"));
 	}
 
 }

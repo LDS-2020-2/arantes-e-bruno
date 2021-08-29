@@ -19,7 +19,7 @@ public class FileManager {
   }
 
   public void save(Storable storable) {
-    final File file = new File(folder.getPath() + "/" + storable.getFileName());
+    final File file = new File(folder.getPath() + "/" + storable.getFileName() + ".txt");
 
     try (final RandomAccessFile raf = new RandomAccessFile(file, "rw")) {
       for (Map.Entry<String, String> entry : storable.getFields().entrySet()) {
