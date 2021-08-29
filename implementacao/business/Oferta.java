@@ -9,7 +9,7 @@ public class Oferta {
 	private List<Aluno> alunos;
 	
 	public void addAluno(Aluno a) {
-		if(alunos.size() <=MAX_ALUNOS)
+		if(!isCheia())
 			this.alunos.add(a);
 	}
 	public void removeAluno(Aluno a) {
@@ -22,6 +22,13 @@ public class Oferta {
 		else {
 			disciplina.setAtiva(false);
 		}
+	}
+	public boolean isCheia() {
+		boolean lotacao = true;
+		if(alunos.size() <=MAX_ALUNOS) {
+			lotacao = false;
+		}
+		return lotacao;
 	}
 	public Disciplina getDisciplina() {
 		return disciplina;
