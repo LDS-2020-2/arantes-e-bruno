@@ -36,6 +36,10 @@ public class Disciplina {
 		this.setEmenta(ementa);
 		this.setProfessor(professor);
 	}
+	@Override
+	public String toString(){
+		return "Nome: "+this.nome+", ementa: "+this.ementa+", professor: "+this.professor.toString()+"\n";
+	}
 	
 	
 
