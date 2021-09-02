@@ -33,6 +33,10 @@ public class Professor extends Usuario {
 	public List<Disciplina> getDisciplinas() {
 		return disciplinas;
 	}
+	@Override 
+	public String toString(){
+		return " Professor: "+this.nome+", email: "+super.getEmail()+"";
+	}
 
 	@Override
 	public Map<String, String> getFields() {
