@@ -75,6 +75,10 @@ public class Aluno extends Usuario {
 		this.historico = new ArrayList<DisciplinaCursada>();
 		this.disciplinas = new ArrayList<Disciplina>();
 	}
+	@Override 
+	public String toString(){
+		return " Aluno: "+this.nome+", numero de matricula: "+this.nmatricula+", email: "+super.getEmail()+"";
+	}
 
 	@Override
 	public Map<String, String> getFields() {
