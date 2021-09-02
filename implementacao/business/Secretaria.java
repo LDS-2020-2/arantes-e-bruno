@@ -23,6 +23,10 @@ public class Secretaria {
 	public void removeUsuario(Usuario u) {
 		usuarios.remove(u);
 	}
+	public List<String> gerarCurriculo(){
+		return disciplinas.stream().map(Disciplina::toString).collect(toList());
+
+	}
 	
 
 }
