@@ -27,6 +27,10 @@ public class DisciplinaCursada {
 		this.setNota(nota);
 		this.setPresenca(presenca);
 	}
+	@Override 
+	public String toString(){
+		return " Disciplina: "+this.disciplina.getNome()+", presenca: "+this.presenca+", nota: "+this.nota+"";
+	}
 	
 
 }
